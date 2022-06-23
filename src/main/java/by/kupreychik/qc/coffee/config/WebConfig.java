@@ -1,4 +1,4 @@
-package by.kupreychik.qc.coffee;
+package by.kupreychik.qc.coffee.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
