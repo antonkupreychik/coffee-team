@@ -34,6 +34,6 @@ public class WordsService {
 
     public String getRandomWord(Types type) {
         List<String> words = wordsContainer.get(type);
-        return words.get(random.nextInt(words.size()));
+        return words.get(random.nextInt(words.size() - 1));
     }
 }
