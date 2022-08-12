@@ -16,7 +16,7 @@ public class SwaggerConfig {
         return new OpenAPI()
                 .info(new Info().title("SpringShop API")
                         .description("Spring shop sample application")
-                        .version("v0.0.1")
+                        .version("v0.0.2 - Fri 12 Aug 2022")
                         .license(new License().name("Apache 2.0").url("http://springdoc.org")))
                 .externalDocs(new ExternalDocumentation()
                         .description("SpringShop Wiki Documentation")
@@ -26,14 +26,14 @@ public class SwaggerConfig {
     @Bean
     public GroupedOpenApi publicApi() {
         return GroupedOpenApi.builder()
-                .group("springshop-public")
-                .pathsToMatch("/randomWord/**")
+                .group("public")
+                .pathsToMatch("/public/**")
                 .build();
     }
     @Bean
     public GroupedOpenApi adminApi() {
         return GroupedOpenApi.builder()
-                .group("springshop-admin")
+                .group("admin")
                 .pathsToMatch("/my/**")
                 .build();
     }
