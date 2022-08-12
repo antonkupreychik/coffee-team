@@ -33,7 +33,7 @@ public class RandomWordController {
     }
 
     @PostMapping("/my/randomWord")
-    @Operation(summary = "Add word to my list", description = "Add word to my list")
+    @Operation(summary = "Add word to my new list", description = "Add word to my list")
     public ResponseEntity<String> addNewWord(String word) {
         wordsService.addWord(word);
         return ResponseEntity.ok().build();
