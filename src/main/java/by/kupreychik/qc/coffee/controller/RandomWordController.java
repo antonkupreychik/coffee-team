@@ -2,6 +2,8 @@ package by.kupreychik.qc.coffee.controller;
 
 import by.kupreychik.qc.coffee.enums.Types;
 import by.kupreychik.qc.coffee.service.WordsService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 @RestController
+@Tag(name = "words", description = "Words controller")
 public class RandomWordController {
 
     @Autowired
@@ -30,6 +33,7 @@ public class RandomWordController {
     }
 
     @PostMapping("/my/randomWord")
+    @Operation(summary = "Add word to my list", description = "Add word to my list")
     public ResponseEntity<String> addNewWord(String word) {
         wordsService.addWord(word);
         return ResponseEntity.ok().build();
