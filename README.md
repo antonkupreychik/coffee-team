@@ -1,4 +1,8 @@
-# coffee-team
+# Petit QR Code generator
+
+This application for creating qr code for clients in coffee house. 
+
+Ехаmple of QR Code:
 
 
-Link to swagger - http://127.0.0.1:8081/swagger-ui/index.html#/
+
