@@ -6,4 +6,4 @@
 
 This application for creating qr code for clients in coffee house. 
 
-
+Link to this application deployed on heroku - https://petit-coffee.herokuapp.com
