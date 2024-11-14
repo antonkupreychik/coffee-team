@@ -26,6 +26,10 @@ public class WordsService {
         wordsContainer.put(Types.ME, new ArrayList<>());
     }
 
+    public List<String> getWords() {
+        return wordsContainer.get(Types.RANDOM);
+    }
+
     public void addWord(String word) {
         wordsContainer.get(Types.ME).add(word);
     }
