@@ -1,6 +1,5 @@
 package by.kupreychik.qc.coffee.controller;
 
-import by.kupreychik.qc.coffee.enums.Types;
 import by.kupreychik.qc.coffee.service.WordsService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
@@ -24,14 +23,14 @@ public class RandomWordController {
     @GetMapping
     public ModelAndView getRandom(ModelAndView modelAndView) {
         modelAndView.setViewName(INDEX_PATH);
-        modelAndView.addObject(RANDOM, wordsService.getRandomWord(Types.RANDOM));
+        modelAndView.addObject(RANDOM, wordsService.getRandomWord());
         return modelAndView;
     }
 
     @GetMapping("/my")
     public ModelAndView getMyRandom(ModelAndView modelAndView) {
         modelAndView.setViewName(INDEX_PATH);
-        modelAndView.addObject(RANDOM, wordsService.getRandomWord(Types.ME));
+        modelAndView.addObject(RANDOM, wordsService.getRandomWord());
         return modelAndView;
     }
 
